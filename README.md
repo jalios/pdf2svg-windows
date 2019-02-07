@@ -10,3 +10,6 @@ The platform used to do the cross compilation in a vanilla fedora 22 beta versio
 To cross compile for Windows under Linux, simply install the relevant cross-compiler packages (for Fedora this is mingw32-cairo and mingw32-poppler and their dependencies) and then replace “./configure” in the compilation instructions above with “mingw32-configure” or “mingw64-configure”.
 
 Note : This build is provided AS IS and JALIOS SA will not do any support about that. 
+
+
+Despite our efforts to recompile this program, it is still unstable (crashing with some files). We finally solved the problem by using a bash script (available at https://community.jalios.com/pdf2svg ) that iterates (each page) on "pdftocairo.exe" (from http://blog.alivate.com.au/poppler-windows/ ).
